@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIUC Course Tracker - Student Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex items-center justify-center min-h-screen relative min-h-screen bg-cover bg-center bg-fixed flex items-center justify-center font-sans"
+  style="background-image: url('./assets/iiuc_cover.jpg');">
+    <div class="bg-white/50 p-10 rounded-xl shadow-2xl w-full max-w-sm text-center">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold">IIUC<span class="text-[#32a88f]">Ademy</span></h2>
+        </div>
+        <h2 class="text-2xl font-semibold mb-2">Student Login</h2>
+        <p class="text-sm text-gray-600 mb-6">Sign in with your IIUC credentials to access your courses</p>
+        <form id="login-form">
+            <div class="mb-4 text-left">
+                <label for="email" class="block text-sm font-medium text-gray-700">IIUC Email Address</label>
+                <input type="email" id="email" name="email" placeholder="student@iiuc.ac.bd" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="mb-4 text-left">
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+            </div>
+            <div class="flex items-center mb-6">
+                <input type="checkbox" id="remember" name="remember" class="h-4 w-4 text-blue-600 rounded">
+                <label for="remember" class="ml-2 text-sm text-gray-900">Remember me</label>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Sign In to Dashboard</button>
+        </form>
+        <div class="text-sm mt-6 text-gray-900">
+            Need help? Contact IT Support at <a href="mailto:it@iiuc.ac.bd" class="text-blue-600 hover:underline">it@iiuc.ac.bd</a>
+        </div>
+        <div class="text-sm mt-2 text-gray-900">
+            Don't have an account? <a href="register.html" class="text-blue-600 hover:underline">Register here</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

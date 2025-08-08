@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIUC Course Tracker - Student Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <header class="bg-white shadow-sm p-4 md:px-8 flex justify-between items-center">
+        <div class="flex-grow">
+            <h2 class="text-2xl font-bold">IIUC<span class="text-[#32a88f]">Ademy</span></h2>
+            <p class="text-sm text-gray-900">Student Dashboard</p>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-gray-500 text-xl cursor-pointer hover:text-blue-600">&#9993;</span>
+            <span class="text-gray-500 text-xl cursor-pointer hover:text-blue-600">&#128276;</span>
+            <span class="text-gray-500 text-xl cursor-pointer hover:text-blue-600">&#9881;</span>
+            <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">S</div>
+        </div>
+    </header>
+
+    <main class="p-4 md:p-8">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold mb-1">Welcome back, Student!</h2>
+            <p class="text-gray-600">Here's an overview of your enrolled courses for this semester.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                <span class="text-blue-600 text-3xl mb-2 block">&#128214;</span>
+                <p class="text-4xl font-bold">6</p>
+                <p class="text-sm text-gray-500">Enrolled Courses</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                <span class="text-blue-600 text-3xl mb-2 block">&#128077;</span>
+                <p class="text-4xl font-bold">18</p>
+                <p class="text-sm text-gray-500">Total Credits</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                <span class="text-blue-600 text-3xl mb-2 block">&#128200;</span>
+                <p class="text-4xl font-bold">3.75</p>
+                <p class="text-sm text-gray-500">Current GPA</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                <span class="text-blue-600 text-3xl mb-2 block">&#128339;</span>
+                <p class="text-4xl font-bold">12</p>
+                <p class="text-sm text-gray-500">Weeks Remaining</p>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md">
+            <div class="flex justify-between items-center mb-4">
+                <div>
+                    <h3 class="text-2xl font-bold">My Courses</h3>
+                    <p class="text-gray-600">Manage and access your enrolled courses</p>
+                </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 mb-6">
+                <input type="text" placeholder="Search courses, instructors, or course codes..."
+                    class="flex-grow px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Schedule</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- 1. CSE 101 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">CSE 101</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Introduction to Programming</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Dr. Rahman Ahmed</p>
+                    <p class="text-sm text-gray-500 mb-4">Fundamental concepts of programming using C++ and problem-solving techniques.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>120 students</span>
+                        <span>3 credits</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+                <!-- 2. MAT 201 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">MAT 201</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Calculus II</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Prof. Sarawar Khan</p>
+                    <p class="text-sm text-gray-500 mb-4">Advanced calculus including integration techniques, series, and differential equations.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>85 students</span>
+                        <span>4 credits</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+                <!-- 3. PHY 101 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">PHY 101</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Physics I</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Dr. Mohammad Ali</p>
+                    <p class="text-sm text-gray-500 mb-4">Classical mechanics, thermodynamics, and wave phenomena with laboratory work.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>95 students</span>
+                        <span>3 credits</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+                <!-- 4. AW 101 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">AW 101</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Academic Writing</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Anwar Jaberi</p>
+                    <p class="text-sm text-gray-500 mb-4">Learn to write effectively with structured meaning and clarity.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>95 students</span>
+                        <span>1 credit</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+                <!-- 5. DSA 101 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">DSA 101</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Data Structure</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Mohammad Ariful Islam</p>
+                    <p class="text-sm text-gray-500 mb-4">Covers arrays, linked lists, stacks, queues, and other fundamental data structures.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>95 students</span>
+                        <span>3 credits</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+                <!-- 6. Algo 101 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition duration-300 cursor-pointer course-card">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-blue-600 text-lg font-semibold">Algo 101</span>
+                        <span class="text-gray-400 text-xl">&#128214;</span>
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Algorithm</h4>
+                    <p class="text-sm text-gray-600 mb-2">Instructor: Tawhid Islam</p>
+                    <p class="text-sm text-gray-500 mb-4">An algorithm is a step-by-step set of instructions for solving a problem or completing a task.</p>
+                    <div class="flex flex-wrap gap-x-4 text-xs text-gray-400 mb-4">
+                        <span>16 weeks</span>
+                        <span>95 students</span>
+                        <span>3 credits</span>
+                    </div>
+                    <button class="view-course-btn w-full border border-blue-600 text-blue-600 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition duration-300">View Course</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
